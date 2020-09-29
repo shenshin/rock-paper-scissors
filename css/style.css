@@ -1,5 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+:root {
+  --primary-color: #003699;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --lose-color: #dc3545;
+  --win-color: #28a745;
+  --modal-duration: 1s;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: white;
+  color: var(--dark-color);
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  text-align: center;
+}
+.restart-btn {
+  display: none;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #eee;
+}
+.restart-btn:hover {
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+.header {
+  text-align: center;
+  margin: 1rem 0;
+}
+.header h1 {
+  margin-bottom: 1rem;
+}
+.score {
+  display: flex;
+  font-size: 1.2rem;
+  color: white;
+}
+.score p {
+  flex-basis: 50%;
+}
+.score p:first-child {
+  background-color: var(--primary-color);
+}
+.score p:last-child {
+  background-color: var(--dark-color);
+}
+.choices {
+  display: flex;
+  justify-content: space-between;
+  --flex-gap: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+.choice {
+  font-size: 10rem;
+  flex-basis: calc(100% / 3 - var(--flex-gap) * 2);
+  cursor: pointer;
+}
+.choice:hover {
+  color: var(--primary-color);
+}
+@media (max-width: 700px) {
+  .choice {
+    font-size: 8rem;
+  }
+}
+@media (max-width: 500px) {
+  .choice {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 350px) {
+  .choice {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 250px) {
+  .choice {
+    font-size: 2rem;
+  }
 }
