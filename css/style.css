@@ -25,6 +25,7 @@ body {
   text-align: center;
 }
 .restart-btn {
+  margin-bottom: 1rem;
   display: none;
   background-color: var(--light-color);
   color: var(--dark-color);
